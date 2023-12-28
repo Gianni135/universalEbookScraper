@@ -7,7 +7,7 @@ A simple script to scrape any ebook for a PDF file
 - Run:  
 `python3 universalEbookScraper.py`  
 If that doesn't work, try:  
-`python universalEbookScraper.py`
+`python universalEbookScraper.py`  
 **Output**  
 - An image for each page in the `/images` directory
 - A single PDF file with a separate page for each image
