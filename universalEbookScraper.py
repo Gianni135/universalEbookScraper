@@ -1,6 +1,7 @@
 import pyautogui
 from PIL import Image
 from time import sleep
+pyautogui.FAILSAFE = False
 
 def countdown(secondsBeforeCountDown, countdownDuration):
     sleep(secondsBeforeCountDown)
@@ -20,8 +21,8 @@ print("Bottom right corner position acquired: " + str(x2) + ' ' + str(y2))
 
 screenshotList = []
 numOfPages = int(input("Enter the number of pages: "))
-
-print("Place cursor on next page button")
+pageLoadTime = int(input("Enter the wait time in seconds for the next page to be loaded (default=10): "))
+print("Position your cursor on next page button and and don't move it until the capture process is completed")
 countdown(3, 5)
 
 for i in range(numOfPages):
@@ -30,7 +31,7 @@ for i in range(numOfPages):
     screenshotList.append('page' + str(i+1) + '.png')
     print("Page " + str(i+1) + " Acquired")
     pyautogui.click() #go to the next page
-    sleep(10)
+    sleep(pageLoadTime)
 
 images = [
     Image.open("./" + f)
