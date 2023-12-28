@@ -1,5 +1,5 @@
 # universalEbookScraper
-A simple script to scrape any ebook
+A simple script to scrape any ebook for a PDF file
 # Running
 - Navigate to the directory contaning "universalEbookScraper.py" and "requirements.txt"  
 - Install requirements:  
