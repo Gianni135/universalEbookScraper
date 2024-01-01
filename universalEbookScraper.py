@@ -29,7 +29,6 @@ countdown(3, 5)
 if not os.path.exists("./images"):
     os.makedirs("./images") 
 
-
 for i in range(numOfPages):
     myScreenshot = pyautogui.screenshot(region=(x1, y1, x2-x1, y2-y1))
     myScreenshot.save(r'./images/page' + str(i+1) + '.png')
